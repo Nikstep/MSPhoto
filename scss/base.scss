@@ -1,0 +1,56 @@
+//GENERAL
+*, *:before, *:after { box-sizing: inherit; }
+
+.group:before,
+.group:after {
+	content: " ";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	*zoom: 1;
+}
+
+img {
+	width: 100%;
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.container {
+	width: 1024px;
+	padding: 0px 16px;
+}
+
+//VARIABLES
+
+$color-bg-header: #F6B1C3;
+$color-text: #fff;
+$color-text-alt: #F6B1C3;
+$color-footer: #F6B1C3;
+
+@font-face {
+	font-family: Love;
+	src: url(Love.ttf)
+}
+$font-alt: Montserrat, sans-serif;
+
+$button-colors: (
+	'red': #BC0D35,
+	'revert': #fff,
+);
+
+//HEADER
+
+.site-header {
+	background: $color-bg-header;
+}
+
+//IN CONSTRUCTION TOOLS
+.logo {
+	display: none;
+}

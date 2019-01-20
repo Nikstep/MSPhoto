@@ -1,0 +1,42 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  *zoom: 1;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  width: 1024px;
+  padding: 0px 16px;
+}
+
+@font-face {
+  font-family: Love;
+  src: url(Love.ttf);
+}
+.site-header {
+  background: #F6B1C3;
+}
+
+.logo {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
