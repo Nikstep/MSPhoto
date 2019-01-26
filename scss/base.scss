@@ -1,6 +1,15 @@
 //GENERAL
 *, *:before, *:after { box-sizing: inherit; }
 
+@font-face { font-family: Lovelt; src: url('../Love.ttf'); }
+
+body {
+	font-family: 'Lovelt', sans-serif;
+	color: #323232;
+	background: #FFF;
+	-webkit-font-smoothing: antialiased;
+}
+
 .group:before,
 .group:after {
 	content: " ";
@@ -22,21 +31,29 @@ img {
 }
 
 .container {
-	width: 1024px;
+	width: 1200px;
+	margin: auto;
 	padding: 0px 16px;
+	position: relative;
+}
+
+.fa {
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
 }
 
 //VARIABLES
 
-$color-bg-header: #F6B1C3;
-$color-text: #fff;
-$color-text-alt: #F6B1C3;
+$color-bg-header: #EFBFA8;
+$color-bg-prim: #EFBFA8;
+$color-bg-alt: #fff;
+$color-text-prim: #EFBFA8;
+$color-text-alt: #fff;
 $color-footer: #F6B1C3;
 
-@font-face {
-	font-family: Love;
-	src: url(Love.ttf)
-}
 $font-alt: Montserrat, sans-serif;
 
 $button-colors: (
@@ -50,7 +67,88 @@ $button-colors: (
 	background: $color-bg-header;
 }
 
+//MENU
+
+.logo {
+	// position: absolute;
+	height: 100px;
+	width: 100px;
+	float: left;
+	filter: invert(100%);
+	vertical-align: middle;
+}
+
+.menu-bar {
+	background: lighten($color-bg-header, 3%);
+	border-bottom: 1px solid darken($color-bg-header, 8%);
+
+	h1 {
+		margin: 0;
+	}
+}
+
+.menu {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		line-height: 100px;
+	}
+
+	li:first-child {
+		margin-left: -100px;
+	}
+
+	a {
+		color: #fff;
+		padding: 10px 20px;
+		border-radius: 4px;
+		font-size: 16px;
+	}
+}
+
+.menu a:hover,
+.menu a:focus {
+	color: $color-bg-header;
+	background: #fff;
+}
+
+.social {
+	float: right;
+	list-style: none;
+	padding-left: 0;
+	margin-top: -73px;
+}
+
+.social li {
+	display: inline-block;
+}
+
+.social .fa {
+	font-size: 17px;
+}
+
+.social-icon {
+	display: block;
+	height: 48px;
+	width: 48px;
+	color: #fff;
+	text-align: center;
+	line-height: 48px;
+	border-radius: 4px;
+	margin-left: 2px;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+	color: #efbeb2;
+	background: #fff;
+}
+
 //IN CONSTRUCTION TOOLS
 .logo {
-	display: none;
+//	display: none;
 }

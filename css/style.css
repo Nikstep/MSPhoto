@@ -2,6 +2,17 @@
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: Lovelt;
+  src: url("../Love.ttf");
+}
+body {
+  font-family: "Lovelt", sans-serif;
+  color: #323232;
+  background: #FFF;
+  -webkit-font-smoothing: antialiased;
+}
+
 .group:before,
 .group:after {
   content: " ";
@@ -23,20 +34,96 @@ img {
 }
 
 .container {
-  width: 1024px;
+  width: 1200px;
+  margin: auto;
   padding: 0px 16px;
+  position: relative;
 }
 
-@font-face {
-  font-family: Love;
-  src: url(Love.ttf);
+.fa {
+  vertical-align: middle;
 }
+
+a {
+  text-decoration: none;
+}
+
 .site-header {
-  background: #F6B1C3;
+  background: #EFBFA8;
 }
 
 .logo {
-  display: none;
+  height: 100px;
+  width: 100px;
+  float: left;
+  filter: invert(100%);
+  vertical-align: middle;
+}
+
+.menu-bar {
+  background: #f1c9b5;
+  border-bottom: 1px solid #e9a686;
+}
+.menu-bar h1 {
+  margin: 0;
+}
+
+.menu {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.menu li {
+  display: inline-block;
+  line-height: 100px;
+}
+.menu li:first-child {
+  margin-left: -100px;
+}
+.menu a {
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #EFBFA8;
+  background: #fff;
+}
+
+.social {
+  float: right;
+  list-style: none;
+  padding-left: 0;
+  margin-top: -73px;
+}
+
+.social li {
+  display: inline-block;
+}
+
+.social .fa {
+  font-size: 17px;
+}
+
+.social-icon {
+  display: block;
+  height: 48px;
+  width: 48px;
+  color: #fff;
+  text-align: center;
+  line-height: 48px;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  color: #efbeb2;
+  background: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
