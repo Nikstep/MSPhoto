@@ -40,4 +40,43 @@ $(document).ready(function(){
     }
   ]
 });
+
+/*
+* LIGHTBOX
+*/
+
+var gallery = $(".gallery");
+
+var overlay = $("<div/>", { id: "overlay" });
+    overlay.appendTo("body").hide(),
+    image = $("<img/>", { id: "image"}),
+    image.appendTo("#overlay").hide();
+    
+$(".gallery a").on("click", function() {
+  event.preventDefault();
+   
+   var href = $(this).attr("href");
+   $("#image").attr("src", href);
+
+    overlay.html( image.show() )
+            .fadeIn(400);
+   
+});
+
+$(document).on("click", "#overlay", function() {
+    $(this).fadeOut(400);
+});
+
+
+$(document).on("keyup", function() {
+    if( event.which == 27) {
+        overlay.fadeOut(400);
+    }
+});
+
+
+/*
+* GALLER import via AJAX
+*/
+
 });

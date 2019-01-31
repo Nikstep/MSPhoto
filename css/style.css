@@ -84,7 +84,7 @@ a {
 }
 .menu a {
   color: #333;
-  padding: 12px 20px;
+  padding: 12px 16px;
   border-radius: 4px;
   font-size: 18px;
   transition: 0.3s all ease-in-out;
@@ -166,6 +166,7 @@ h2.claim {
   margin-top: 5%;
 }
 .about-text p {
+  line-height: 22px;
   padding: 10px 0px 0px 40px;
   text-align: center;
   margin-bottom: 70px;
@@ -194,7 +195,7 @@ h2.claim {
 .btn-about:hover, .btn-about:focus {
   box-shadow: 5px 5px 2px #000;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
-  color: #333;
+  color: black;
   transition: 0.15s all ease-in-out;
 }
 
@@ -217,6 +218,9 @@ h2.claim {
   background: #333;
   color: #fffafa;
 }
+.call p {
+  line-height: 22px;
+}
 
 .footer {
   background: #333;
@@ -232,19 +236,44 @@ h2.claim {
 .gallery {
   background: #e6e6e6;
   font-size: 0;
+  padding: 4px 0;
 }
 
 .gallery-set {
   text-align: center;
   position: relative;
 }
-.gallery-set a {
-  width: 33.33333333%;
-  height: auto;
-  display: inline-block;
+.gallery-set img {
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  width: 33.3333333%;
+  height: 300px;
+  object-fit: cover;
+  border: 3px solid #e6e6e6;
+  border-radius: 5px;
 }
-.gallery-set a:first-child {
-  margin-top: 10px;
+
+#overlay {
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  text-align: center;
+}
+
+#overlay img {
+  border: 5px solid #fff;
+  border-radius: 5px;
+  width: auto;
+  height: 80vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */
