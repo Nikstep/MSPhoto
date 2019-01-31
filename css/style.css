@@ -252,6 +252,12 @@ h2.claim {
   object-fit: cover;
   border: 3px solid #e6e6e6;
   border-radius: 5px;
+  transition: 0.2s all ease-in-out;
+}
+.gallery-set img:hover, .gallery-set img:focus {
+  transform: scale(1.05);
+  z-index: 20;
+  transition: 0.3s all ease-in-out;
 }
 
 #overlay {

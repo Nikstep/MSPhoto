@@ -42,10 +42,14 @@ $(document).ready(function(){
 });
 
 /*
-* LIGHTBOX
+* IMAGE HOVER
 */
 
-var gallery = $(".gallery");
+
+
+/*
+* LIGHTBOX
+*/
 
 var overlay = $("<div/>", { id: "overlay" });
     overlay.appendTo("body").hide(),
