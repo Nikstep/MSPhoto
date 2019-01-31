@@ -1,27 +1,13 @@
 //GENERAL
 *, *:before, *:after { box-sizing: inherit; }
 
-@font-face { font-family: Lovelt; src: url('../Love.ttf'); }
+@font-face { font-family: Lovelt; src: url(../fonts/Love.ttf); }
 
 body {
 	font-family: 'Lovelt', sans-serif;
 	color: #323232;
 	background: #FFF;
 	-webkit-font-smoothing: antialiased;
-}
-
-.group:before,
-.group:after {
-	content: " ";
-	display: table;
-}
-
-.group:after {
-	clear: both;
-}
-
-.group {
-	*zoom: 1;
 }
 
 img {
@@ -31,9 +17,9 @@ img {
 }
 
 .container {
-	width: 1200px;
+	width: 1400px;
 	margin: auto;
-	padding: 0px 16px;
+	padding: 0;
 	position: relative;
 }
 
@@ -45,14 +31,30 @@ a {
 	text-decoration: none;
 }
 
+//CLEARFIX
+.container:before,
+.container:after {
+	content: " ";
+	display: table;
+}
+
+.container:after {
+	clear: both;
+}
+
+.container {
+	*zoom: 1;
+}
+
+
 //VARIABLES
 
-$color-bg-header: #EFBFA8;
-$color-bg-prim: #EFBFA8;
-$color-bg-alt: #fff;
-$color-text-prim: #EFBFA8;
-$color-text-alt: #fff;
-$color-footer: #F6B1C3;
+$color-bg-header: #fffafa;
+$color-bg-main: #333;
+$color-bg-alt: #fffafa;
+
+$color-text-main: #333;
+$color-text-alt:#fffafa;
 
 $font-alt: Montserrat, sans-serif;
 
@@ -63,24 +65,28 @@ $button-colors: (
 
 //HEADER
 
-.site-header {
-	background: $color-bg-header;
-}
-
-//MENU
-
 .logo {
-	// position: absolute;
-	height: 100px;
-	width: 100px;
+	box-sizing: border-box;
+	position: absolute;
 	float: left;
-	filter: invert(100%);
-	vertical-align: middle;
+	transition: 0.3s all ease-in-out;
+
+	//filter: invert(100%); --> udělat mixin s true/false --> focus/hover
+	img {
+		margin-top: -10px;
+		height: 100px;
+		width: 100px;
+	}
+	&:hover,
+	&:focus {
+		filter: invert(100%) drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+		transition: 0.3s all ease-in-out;
+		}
 }
 
 .menu-bar {
 	background: lighten($color-bg-header, 3%);
-	border-bottom: 1px solid darken($color-bg-header, 8%);
+	border-bottom: 1px solid lighten($color-bg-main, 60%);
 
 	h1 {
 		margin: 0;
@@ -95,32 +101,36 @@ $button-colors: (
 
 	li {
 		display: inline-block;
-		line-height: 100px;
-	}
-
-	li:first-child {
-		margin-left: -100px;
+		line-height: 80px;
 	}
 
 	a {
-		color: #fff;
-		padding: 10px 20px;
+		color:$color-text-main;
+		padding: 12px 20px;
 		border-radius: 4px;
-		font-size: 16px;
+		font-size: 18px;
+		transition: 0.3s all ease-in-out;
 	}
+	a.selected {
+		color: $color-text-alt;
+		background: $color-bg-main;
+		transition: 0.3s all ease-in-out;
+	}
+	
 }
 
 .menu a:hover,
 .menu a:focus {
-	color: $color-bg-header;
-	background: #fff;
+	color: $color-text-alt;
+	background: $color-bg-main;
+	transition: 0.3s all ease-in-out;
 }
 
 .social {
 	float: right;
 	list-style: none;
 	padding-left: 0;
-	margin-top: -73px;
+	margin-top: -64px;
 }
 
 .social li {
@@ -132,23 +142,165 @@ $button-colors: (
 }
 
 .social-icon {
-	display: block;
+	display: inline-block;
 	height: 48px;
 	width: 48px;
-	color: #fff;
+	color: #000;
 	text-align: center;
 	line-height: 48px;
 	border-radius: 4px;
 	margin-left: 2px;
+	transition: 0.3s all ease-in-out;
 }
 
 .social-icon:hover,
 .social-icon:focus {
-	color: #efbeb2;
-	background: #fff;
+	color: $color-text-alt;
+	background: $color-bg-main;
+	transition: 0.3s all ease-in-out;
+}
+
+//CONTENT
+
+h2.claim {
+	font-size: 34px;
+	text-align: center;
+	margin: 50px 0;
+	text-shadow: 1px 1px 0px #fff, 3px 3px 1px rgba(0,0,0,0.30);
+	//text-shadow: 1px 2px 3py #fff, 1px 2px 3px lighten($color-text-main, 50%);
+}
+
+.about {
+	text-align: center;
+}
+
+.about-bg {
+	color: $color-text-main;
+	background: lighten( $color-bg-main, 70%);
+}
+
+
+.about-pic {
+	padding: 30px 0;
+	margin: 2%;
+	float: left;
+	width: 46%;
+	border-radius: 40px/60px;
+}
+
+.about-text {
+	float: left;
+	width: 46%;
+	margin-top: 5%;
+	p {
+		padding: 10px 0px 0px 40px;
+		text-align: center;
+		margin-bottom: 70px;
+	}
+	h2 {
+		padding: 30px 0px;
+		text-align: center;
+	}
+}
+
+// BUTTONS
+.btn {
+	font-size: 22px;
+	padding: 15px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: $color-text-main;
+	&:hover,
+	&:focus {
+		//color: $color-text-alt;
+		//background: $color-bg-main;
+		//border: solid 1px $color-bg-alt;
+		box-shadow: 5px 5px 2px #000;
+		text-shadow: 1px 1px 1px #000;
+		transition: 0.15s all ease-in-out;
+	}
+}
+
+.btn-about {
+	background: #FFF;
+	&:hover,
+	&:focus {
+		//color: $color-text-alt;
+		//background: $color-bg-main;
+		//border: solid 1px $color-bg-alt;
+		box-shadow: 5px 5px 2px #000;
+		text-shadow: 2px 2px 0px rgba(0,0,0,0.30);
+		color: $color-text-main;
+		transition: 0.15s all ease-in-out;
+	}
+}
+
+.btn-footer {
+	&:hover,
+	&:focus {
+		text-shadow: 1px 1px 1px lightgrey;
+	}
+}
+
+//CTA HOMEPAGE
+
+.pre-footer {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.call {
+	padding: 0px 20%;
+
+	h2, p, a {
+		margin: 40px 0;
+	}
+	a {
+		background: $color-bg-main;
+		color: $color-text-alt;
+	}
+}
+
+//FOOTER
+
+.footer {
+	background: $color-bg-main;
+	text-align: center;
+	padding: 10px;
+	color: $color-text-alt;
+		a {
+			color: #E74C3C;
+			text-decoration: none;
+		}
+	}
+
+
+
+//GALLERY
+
+.gallery {
+	background: lighten( $color-bg-main, 70%);
+	font-size: 0;
+}
+
+.gallery-set {
+	text-align: center;
+	position: relative;
+	a {
+		width: 33.33333333%;
+		height: auto;
+		display: inline-block;
+	//	margin-bottom: 10px
+	}
+	a:first-child {
+		margin-top: 10px;
+	}
 }
 
 //IN CONSTRUCTION TOOLS
-.logo {
-//	display: none;
-}
+$break-mobile: 320px;
+$break-mobile-max: 480px;
+$break-tablet: 760px;
+$break-tablet-max: 880px;
+$break-desktop: 1024px;
+$break-desktop-max: 1320px;

@@ -4,27 +4,13 @@
 
 @font-face {
   font-family: Lovelt;
-  src: url("../Love.ttf");
+  src: url(../fonts/Love.ttf);
 }
 body {
   font-family: "Lovelt", sans-serif;
   color: #323232;
   background: #FFF;
   -webkit-font-smoothing: antialiased;
-}
-
-.group:before,
-.group:after {
-  content: " ";
-  display: table;
-}
-
-.group:after {
-  clear: both;
-}
-
-.group {
-  *zoom: 1;
 }
 
 img {
@@ -34,9 +20,9 @@ img {
 }
 
 .container {
-  width: 1200px;
+  width: 1400px;
   margin: auto;
-  padding: 0px 16px;
+  padding: 0;
   position: relative;
 }
 
@@ -48,21 +34,39 @@ a {
   text-decoration: none;
 }
 
-.site-header {
-  background: #EFBFA8;
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+
+.container {
+  *zoom: 1;
 }
 
 .logo {
+  box-sizing: border-box;
+  position: absolute;
+  float: left;
+  transition: 0.3s all ease-in-out;
+}
+.logo img {
+  margin-top: -10px;
   height: 100px;
   width: 100px;
-  float: left;
-  filter: invert(100%);
-  vertical-align: middle;
+}
+.logo:hover, .logo:focus {
+  filter: invert(100%) drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  transition: 0.3s all ease-in-out;
 }
 
 .menu-bar {
-  background: #f1c9b5;
-  border-bottom: 1px solid #e9a686;
+  background: white;
+  border-bottom: 1px solid #cccccc;
 }
 .menu-bar h1 {
   margin: 0;
@@ -76,29 +80,33 @@ a {
 }
 .menu li {
   display: inline-block;
-  line-height: 100px;
-}
-.menu li:first-child {
-  margin-left: -100px;
+  line-height: 80px;
 }
 .menu a {
-  color: #fff;
-  padding: 10px 20px;
+  color: #333;
+  padding: 12px 20px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
+  transition: 0.3s all ease-in-out;
+}
+.menu a.selected {
+  color: #fffafa;
+  background: #333;
+  transition: 0.3s all ease-in-out;
 }
 
 .menu a:hover,
 .menu a:focus {
-  color: #EFBFA8;
-  background: #fff;
+  color: #fffafa;
+  background: #333;
+  transition: 0.3s all ease-in-out;
 }
 
 .social {
   float: right;
   list-style: none;
   padding-left: 0;
-  margin-top: -73px;
+  margin-top: -64px;
 }
 
 .social li {
@@ -110,20 +118,133 @@ a {
 }
 
 .social-icon {
-  display: block;
+  display: inline-block;
   height: 48px;
   width: 48px;
-  color: #fff;
+  color: #000;
   text-align: center;
   line-height: 48px;
   border-radius: 4px;
   margin-left: 2px;
+  transition: 0.3s all ease-in-out;
 }
 
 .social-icon:hover,
 .social-icon:focus {
-  color: #efbeb2;
-  background: #fff;
+  color: #fffafa;
+  background: #333;
+  transition: 0.3s all ease-in-out;
+}
+
+h2.claim {
+  font-size: 34px;
+  text-align: center;
+  margin: 50px 0;
+  text-shadow: 1px 1px 0px #fff, 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.about {
+  text-align: center;
+}
+
+.about-bg {
+  color: #333;
+  background: #e6e6e6;
+}
+
+.about-pic {
+  padding: 30px 0;
+  margin: 2%;
+  float: left;
+  width: 46%;
+  border-radius: 40px/60px;
+}
+
+.about-text {
+  float: left;
+  width: 46%;
+  margin-top: 5%;
+}
+.about-text p {
+  padding: 10px 0px 0px 40px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.about-text h2 {
+  padding: 30px 0px;
+  text-align: center;
+}
+
+.btn {
+  font-size: 22px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+.btn:hover, .btn:focus {
+  box-shadow: 5px 5px 2px #000;
+  text-shadow: 1px 1px 1px #000;
+  transition: 0.15s all ease-in-out;
+}
+
+.btn-about {
+  background: #FFF;
+}
+.btn-about:hover, .btn-about:focus {
+  box-shadow: 5px 5px 2px #000;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+  color: #333;
+  transition: 0.15s all ease-in-out;
+}
+
+.btn-footer:hover, .btn-footer:focus {
+  text-shadow: 1px 1px 1px lightgrey;
+}
+
+.pre-footer {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.call {
+  padding: 0px 20%;
+}
+.call h2, .call p, .call a {
+  margin: 40px 0;
+}
+.call a {
+  background: #333;
+  color: #fffafa;
+}
+
+.footer {
+  background: #333;
+  text-align: center;
+  padding: 10px;
+  color: #fffafa;
+}
+.footer a {
+  color: #E74C3C;
+  text-decoration: none;
+}
+
+.gallery {
+  background: #e6e6e6;
+  font-size: 0;
+}
+
+.gallery-set {
+  text-align: center;
+  position: relative;
+}
+.gallery-set a {
+  width: 33.33333333%;
+  height: auto;
+  display: inline-block;
+}
+.gallery-set a:first-child {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
