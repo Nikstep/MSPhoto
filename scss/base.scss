@@ -8,6 +8,7 @@ body {
 	color: #323232;
 	background: #FFF;
 	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
 }
 
 img {
@@ -285,6 +286,7 @@ h2.claim {
 	background: lighten( $color-bg-main, 70%);
 	font-size: 0;
 	padding: 4px 0;
+	box-shadow: 3px 3px 4px lighten($color-bg-main, 30%);
 }
 
 .gallery-set {
@@ -331,6 +333,113 @@ h2.claim {
 	top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+}
+
+//CONTACT
+
+.ktn {
+	margin-bottom: 18%;
+}
+
+.ktn-left {
+	float: left;
+	width: 30%;
+	h2, p, ul {
+		padding: 10px 40px;
+	}
+	h2 {
+		padding-top: 30px;
+		padding-bottom: 0;
+	}
+	.hrs {
+		width: 50%;
+		margin: 0 15%;
+		transition: 0.3s all ease-in-out;
+		&:hover {
+			filter: drop-shadow(3px 3px 2px #FF6E25) drop-shadow(-3px -3px 2px #FF6E25);
+			transition: 0.3s all ease-in-out;
+		}
+	}
+}
+
+.ktn-right {
+	margin-top: 50px;
+	float: right;
+	width: 70%;
+	margin-bottom: 50px;
+	input, textarea {
+		line-height: 40px;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 20px;
+		text-indent: 10px;
+		border: none;
+		border: 1px solid $color-text-main;
+		border-radius: 3px;
+		&:focus{
+			border-bottom: 2px solid #BC0D35;
+		}
+	}
+	#name, #phone {
+		width: 44%;
+	}
+	#name {
+		margin-right: 2.3%;
+	}
+	#email {
+		width: 91%;
+	}
+	#textarea {
+		width: 91%;
+		margin-bottom: 30px;
+	}
+	.btn-form {
+		float:none;
+		text-align: left;
+		background: $color-bg-main;
+		color: $color-text-alt;
+	}
+}
+
+
+
+.ktn-list {
+	list-style-type: none;
+	li {
+		padding-bottom: 5px;
+		font-size: 22px;
+	}
+	li:last-child {
+		font-size: 18px;
+	}
+	i {
+		font-size: 30px;
+		padding-right: 20px;
+	}
+}
+
+//ABOUT-ME
+
+.controls {
+	width: 100%;
+	margin: 50px 0; 
+	text-align: center;
+	list-style: none;
+}
+
+.controls li {
+	float: none;
+	display: inline-block;
+}
+
+.controls a {
+	font-size: 22px;
+	font-weight: 300;
+	color: $color-text-main;
+	text-transform: uppercase;
+	padding: 25px;
+	line-height: 48px;
+	display: block;
 }
 
 //IN CONSTRUCTION TOOLS

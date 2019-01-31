@@ -11,6 +11,7 @@ body {
   color: #323232;
   background: #FFF;
   -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
 img {
@@ -237,6 +238,7 @@ h2.claim {
   background: #e6e6e6;
   font-size: 0;
   padding: 4px 0;
+  box-shadow: 3px 3px 4px gray;
 }
 
 .gallery-set {
@@ -280,6 +282,107 @@ h2.claim {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.ktn {
+  margin-bottom: 18%;
+}
+
+.ktn-left {
+  float: left;
+  width: 30%;
+}
+.ktn-left h2, .ktn-left p, .ktn-left ul {
+  padding: 10px 40px;
+}
+.ktn-left h2 {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+.ktn-left .hrs {
+  width: 50%;
+  margin: 0 15%;
+  transition: 0.3s all ease-in-out;
+}
+.ktn-left .hrs:hover {
+  filter: drop-shadow(3px 3px 2px #FF6E25) drop-shadow(-3px -3px 2px #FF6E25);
+  transition: 0.3s all ease-in-out;
+}
+
+.ktn-right {
+  margin-top: 50px;
+  float: right;
+  width: 70%;
+  margin-bottom: 50px;
+}
+.ktn-right input, .ktn-right textarea {
+  line-height: 40px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  text-indent: 10px;
+  border: none;
+  border: 1px solid #333;
+  border-radius: 3px;
+}
+.ktn-right input:focus, .ktn-right textarea:focus {
+  border-bottom: 2px solid #BC0D35;
+}
+.ktn-right #name, .ktn-right #phone {
+  width: 44%;
+}
+.ktn-right #name {
+  margin-right: 2.3%;
+}
+.ktn-right #email {
+  width: 91%;
+}
+.ktn-right #textarea {
+  width: 91%;
+  margin-bottom: 30px;
+}
+.ktn-right .btn-form {
+  float: none;
+  text-align: left;
+  background: #333;
+  color: #fffafa;
+}
+
+.ktn-list {
+  list-style-type: none;
+}
+.ktn-list li {
+  padding-bottom: 5px;
+  font-size: 22px;
+}
+.ktn-list li:last-child {
+  font-size: 18px;
+}
+.ktn-list i {
+  font-size: 30px;
+  padding-right: 20px;
+}
+
+.controls {
+  width: 100%;
+  margin: 50px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.controls li {
+  float: none;
+  display: inline-block;
+}
+
+.controls a {
+  font-size: 22px;
+  font-weight: 300;
+  color: #333;
+  text-transform: uppercase;
+  padding: 25px;
+  line-height: 48px;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
