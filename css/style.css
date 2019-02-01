@@ -386,36 +386,36 @@ h2.claim {
   display: block;
 }
 
-main {
+.main {
   background: #e6e6e6;
 }
-main h2 {
+.main h2 {
   text-align: center;
   margin-top: 80px;
 }
-main li {
-  border: 1px solid black;
+.main li {
+  border: 1px solid #333;
   border-bottom: none;
   border-radius: 10px 10px 0px 0;
   background: #e6e6e6;
 }
-main li:hover {
-  background: black;
+.main li:hover {
+  background: #333;
 }
-main li:hover a {
+.main li:hover a {
   color: #e6e6e6;
 }
-main li.selected, main li:focus {
-  background: black;
+.main li.selected, .main li:focus {
+  background: #333;
 }
-main li.selected a, main li:focus a {
+.main li.selected a, .main li:focus a {
   color: #e6e6e6;
 }
-main hr {
+.main hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid black;
+  border-top: 1px solid #333;
   margin-top: -20px;
   padding: 0;
 }
