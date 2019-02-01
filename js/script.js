@@ -56,7 +56,7 @@ var overlay = $("<div/>", { id: "overlay" });
     image = $("<img/>", { id: "image"}),
     image.appendTo("#overlay").hide();
     
-$(".gallery a").on("click", function() {
+$(".gallery").on("click", "a", function() {
   event.preventDefault();
    
    var href = $(this).attr("href");
@@ -80,7 +80,27 @@ $(document).on("keyup", function() {
 
 
 /*
-* GALLER import via AJAX
+* GALLERY import via AJAX
 */
+
+
+    var gallery = $(".gallery"),
+        selected = $(".controls").find(".selected");
+
+    $(".controls a").on("click", function(event) {
+        event.preventDefault();
+
+        var a = $(this),
+            li = a.parent(),
+            href = a.attr("href");
+
+        if (selected.is( li ) ) return;
+
+        selected = li;
+
+        li.addClass("selected").siblings().removeClass("selected");
+
+        gallery.load(href + " .gallery-set");
+    });
 
 });

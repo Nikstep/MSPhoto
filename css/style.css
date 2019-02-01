@@ -365,7 +365,8 @@ h2.claim {
 
 .controls {
   width: 100%;
-  margin: 50px 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
   text-align: center;
   list-style: none;
 }
@@ -379,10 +380,64 @@ h2.claim {
   font-size: 22px;
   font-weight: 300;
   color: #333;
-  text-transform: uppercase;
-  padding: 25px;
+  padding: 5px 30px;
+  padding-bottom: 0;
   line-height: 48px;
   display: block;
+}
+
+main {
+  background: #e6e6e6;
+}
+main h2 {
+  text-align: center;
+  margin-top: 80px;
+}
+main li {
+  border: 1px solid black;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0;
+  background: #e6e6e6;
+}
+main li:hover {
+  background: black;
+}
+main li:hover a {
+  color: #e6e6e6;
+}
+main li.selected, main li:focus {
+  background: black;
+}
+main li.selected a, main li:focus a {
+  color: #e6e6e6;
+}
+main hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid black;
+  margin-top: -20px;
+  padding: 0;
+}
+
+.abt-gal {
+  box-shadow: none;
+}
+
+.abt-img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 50px auto;
+  border-radius: 50%;
+}
+
+.abt-text {
+  max-width: 800px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 26px;
 }
 
 /*# sourceMappingURL=style.css.map */
