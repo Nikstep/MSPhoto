@@ -1,3 +1,4 @@
 # MSPhoto
-Just testing GH
-༼ つ ◕_ ◕ ༽つ..
+༼ つ ◕_ ◕ ༽つ.. 
+Used: Sass, Jquery
+fully responsive. 
