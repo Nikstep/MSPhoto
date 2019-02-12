@@ -1,0 +1,32 @@
+//Prefooter
+.pre-footer {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.call {
+	padding: 0px 20%;
+
+	h2, p, a {
+		margin: 40px 0;
+	}
+	a {
+		background: $color-bg-main;
+		color: $color-text-alt;
+	}
+	p {
+		line-height: 22px;
+	}
+}
+//Footer
+.footer {
+	background: $color-bg-main;
+	text-align: center;
+	padding: 10px;
+	color: $color-text-alt;
+	a {
+			color: #E74C3C;
+			text-decoration: none;
+		}
+	}
+

@@ -1,0 +1,23 @@
+
+//Background color
+$color-bg-header: #fffafa;
+$color-bg-main: #333;
+$color-bg-alt: #fffafa;
+//Text color
+$color-text-main: #333;
+$color-text-alt:#fffafa;
+//Selection color
+$color-sel: $color-bg-main;
+//Fonts
+@font-face { font-family: Bohemian typewriter; src: url(../fonts/Bohemiantypewriter.ttf); }
+$font-main: 'Bohemian typewriter', sans-serif;
+$font-alt: Montserrat, sans-serif;
+//Responsivity
+$break-mobile: 480px;
+$break-mobile-max: 550px;
+$break-tablet: 660px;
+$break-tablet-max: 760px;
+$break-desktop: 1024px;
+$break-desktop-max: 1200px;
+//Misc
+$debug: false;

@@ -1,0 +1,135 @@
+//HEADER
+
+.logo {
+	box-sizing: border-box;
+	position: absolute;
+	float: left;
+	transition: 0.3s all ease-in-out;
+
+	//filter: invert(100%); --> udělat mixin s true/false --> focus/hover
+	img {
+		margin-top: -10px;
+		height: 100px;
+		width: 100px;
+	}
+	&:hover,
+	&:focus {
+		filter: invert(100%) drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+		transition: 0.3s all ease-in-out;
+		}
+}
+
+.menu-bar {
+	background: lighten($color-bg-header, 3%);
+	border-bottom: 1px solid lighten($color-bg-main, 60%);
+
+	h1 {
+		margin: 0;
+	}
+}
+
+.menu {
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		line-height: 80px;
+	}
+
+	a {
+		color:$color-text-main;
+		padding: 12px 16px;
+		border-radius: 4px;
+		font-size: 18px;
+		transition: 0.3s all ease-in-out;
+	}
+	a.selected {
+		color: $color-text-alt;
+		background: $color-bg-main;
+		transition: 0.3s all ease-in-out;
+	}
+	
+}
+
+.menu a:hover,
+.menu a:focus {
+	color: $color-text-alt;
+	background: $color-bg-main;
+	transition: 0.3s all ease-in-out;
+}
+
+.social {
+	position: absolute;
+	right: 1%;
+	list-style: none;
+	padding-left: 0;
+}
+
+.social li {
+	display: inline-block;
+}
+
+.social .fa {
+	font-size: 17px;
+}
+
+.social-icon {
+	display: inline-block;
+	height: 48px;
+	width: 48px;
+	color: #000;
+	text-align: center;
+	line-height: 48px;
+	border-radius: 4px;
+	margin-left: 2px;
+	transition: 0.3s all ease-in-out;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+	color: $color-text-alt;
+	background: $color-bg-main;
+	transition: 0.3s all ease-in-out;
+}
+
+.hamburger {
+	float: right;
+	margin-right: 20px;
+	margin-top: 23px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.hamburger.isActive .line:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.isActive .line:nth-child(1) {
+	transform: translateY(12px) rotate(45deg);
+	-moz-transform: translateY(12px) rotate(45deg);
+	-webkit-transform: translateY(12px) rotate(45deg);
+	-o-transform: translateY(12px) rotate(45deg);
+}
+
+.hamburger.isActive .line:nth-child(3) {
+	transform: translateY(-12px) rotate(-45deg);
+	-moz-transform: translateY(-12px) rotate(-45deg);
+	-webkit-transform: translateY(-12px) rotate(-45deg);
+	-o-transform: translateY(-12px) rotate(-45deg);
+}
+
+.line {
+	width: 40px;
+	height: 4px;
+	display: none;
+	background: #000; 
+	margin: 8px auto;
+	transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+}

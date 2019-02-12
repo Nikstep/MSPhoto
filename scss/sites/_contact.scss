@@ -1,0 +1,83 @@
+.ktn {
+	padding-bottom: 18%;
+	background: lighten( $color-bg-main, 70%);
+	@include clearfix;
+}
+
+.ktn-left {
+	float: left;
+	width: 30%;
+	h2, p, ul {
+		padding: 10px 40px;
+	}
+	h2 {
+		padding-top: 30px;
+		padding-bottom: 0;
+	}
+	.hrs {
+		width: 50%;
+		margin: 0 15%;
+		transition: 0.3s all ease-in-out;
+		&:hover {
+			filter: drop-shadow(3px 3px 2px #FF6E25) drop-shadow(-3px -3px 2px #FF6E25);
+			transition: 0.3s all ease-in-out;
+		}
+	}
+}
+
+.ktn-right {
+	margin-top: 50px;
+	float: right;
+	width: 70%;
+	margin-bottom: 50px;
+	input, textarea {
+		line-height: 40px;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 20px;
+		text-indent: 10px;
+		border: none;
+		border: 1px solid $color-text-main;
+		border-radius: 3px;
+		&:focus{
+			border-bottom: 2px solid #BC0D35;
+		}
+	}
+	#name, #phone {
+		width: 44%;
+	}
+	#name {
+		margin-right: 2.3%;
+	}
+	#email {
+		width: 91%;
+	}
+	#textarea {
+		width: 91%;
+		margin-bottom: 30px;
+	}
+	.btn-form {
+		float:none;
+		text-align: left;
+		background: $color-bg-main;
+		color: $color-text-main;
+	}
+}
+
+
+
+.ktn-list {
+	list-style-type: none;
+	li {
+		padding-bottom: 5px;
+		font-size: 22px;
+	}
+	li:last-child {
+		font-size: 18px;
+	}
+	i {
+		font-size: 30px;
+		padding-right: 20px;
+	}
+}
+

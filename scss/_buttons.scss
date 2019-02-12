@@ -1,0 +1,39 @@
+.btn {
+	font-size: 22px;
+	padding: 15px 25px;
+	border-radius: 5px;
+	text-decoration: none;
+	color: $color-text-main;
+	transition: 0.3s all ease-in-out;
+	&:hover,
+	&:focus {
+		//color: $color-text-alt;
+		//background: $color-bg-main;
+		//border: solid 1px $color-bg-alt;
+		box-shadow: 5px 5px 2px #000;
+		text-shadow: 1px 1px 1px #000;
+		transition: 0.3s all ease-in-out;
+	}
+}
+
+.btn-about {
+	background: #FFF;
+	transition: 0.3s all ease-in-out;
+	&:hover,
+	&:focus {
+		//color: $color-text-alt;
+		//background: $color-bg-main;
+		//border: solid 1px $color-bg-alt;
+		box-shadow: 5px 5px 2px #000;
+		text-shadow: 2px 2px 0px rgba(0,0,0,0.30);
+		color: darken($color-text-main, 20%);
+		transition: 0.3s all ease-in-out;
+	}
+}
+
+.btn-footer {
+	&:hover,
+	&:focus {
+		text-shadow: 1px 1px 1px lightgrey;
+	}
+}

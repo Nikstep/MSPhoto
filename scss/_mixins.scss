@@ -1,0 +1,17 @@
+@mixin box-sizing( $value ) {
+	-webkit-box-sizing: $value;
+	   -moz-box-sizing: $value;
+	        box-sizing: $value;
+}
+
+@mixin clearfix {
+	&:before,
+	&:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+
+@mixin selection {
+	::-moz-selection { @content }
+	::-o-selection { @content }
+	::selection { @content }
+}
