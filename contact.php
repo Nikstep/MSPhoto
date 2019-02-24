@@ -13,11 +13,8 @@
     $txt = 'Přišla ti zpráva od: '.$name.".\n\n". $message;
 
     mail($to, $subject, $txt, $headers);
+    header("Location: index.html?mailsend");
 
-<<<<<<< HEAD
     }
-=======
-    header("Location: index.html?mailsend"); 
->>>>>>> 2ecc286eb61b7883d31dd22dffbc093a908256b7
 
 ?>
