@@ -14,6 +14,10 @@
 
     mail($to, $subject, $txt, $headers);
 
+<<<<<<< HEAD
     }
+=======
+    header("Location: index.html?mailsend"); 
+>>>>>>> 2ecc286eb61b7883d31dd22dffbc093a908256b7
 
 ?>
