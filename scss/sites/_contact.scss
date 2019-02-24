@@ -59,8 +59,14 @@
 	.btn-form {
 		float:none;
 		text-align: left;
-		background: $color-bg-main;
+		background: #fff;
 		color: $color-text-main;
+		cursor: pointer;
+		padding: 15px 25px 15px 20px;
+		border-radius: 5px;
+
+
+
 	}
 }
 

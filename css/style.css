@@ -451,8 +451,11 @@ a {
 .ktn-right .btn-form {
   float: none;
   text-align: left;
-  background: #333;
+  background: #fff;
   color: #333;
+  cursor: pointer;
+  padding: 15px 25px 15px 20px;
+  border-radius: 5px;
 }
 
 .ktn-list {
