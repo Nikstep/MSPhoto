@@ -1,0 +1,23 @@
+{
+  "name": "MSPhoto",
+  "version": "1.0.0",
+  "description": "Based on simple requests. Made with Sass, Jquery, Ajax. Fully responsive. Training project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikstep/MSPhoto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nikstep/MSPhoto/issues"
+  },
+  "homepage": "https://github.com/Nikstep/MSPhoto#readme",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

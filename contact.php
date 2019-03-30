@@ -15,7 +15,7 @@
         # Antispam
         if (isset($_POST["website"]) && $_POST["website"] == "") {
         
-        $recipient = "nikstepwn@gmail.com";
+        $recipient = "monica.sykorova@gmail.com";
 
         $subject = "New contact from $name";
 

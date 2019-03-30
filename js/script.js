@@ -150,7 +150,6 @@ $(document).ready(function() {
    * CONTACT FORM
    */
 
-  //
   $(function() {
     var contactForm = $("#contactForm");
     //Standard AJAX/PHP form
