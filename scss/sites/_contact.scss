@@ -1,89 +1,100 @@
 .ktn {
-	padding-bottom: 18%;
-	background: lighten( $color-bg-main, 70%);
-	@include clearfix;
+  padding-bottom: 18%;
+  background: lighten($color-bg-main, 70%);
+  @include clearfix;
 }
 
 .ktn-left {
-	float: left;
-	width: 30%;
-	h2, p, ul {
-		padding: 10px 40px;
-	}
-	h2 {
-		padding-top: 30px;
-		padding-bottom: 0;
-	}
-	.hrs {
-		width: 50%;
-		margin: 0 15%;
-		transition: 0.3s all ease-in-out;
-		&:hover {
-			filter: drop-shadow(3px 3px 2px #FF6E25) drop-shadow(-3px -3px 2px #FF6E25);
-			transition: 0.3s all ease-in-out;
-		}
-	}
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  h2,
+  p,
+  ul {
+    padding: 10px 40px;
+  }
+  h2 {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+  .hrs {
+    width: 30%;
+    margin: 50px auto;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      filter: drop-shadow(3px 3px 2px $color-pink)
+        drop-shadow(-3px -3px 2px $color-pink);
+      transition: 0.3s all ease-in-out;
+    }
+  }
 }
 
 .ktn-right {
-	margin-top: 50px;
-	float: right;
-	width: 70%;
-	margin-bottom: 50px;
-	input, textarea {
-		line-height: 40px;
-		padding: 0;
-		margin: 0;
-		margin-bottom: 20px;
-		text-indent: 10px;
-		border: none;
-		border: 1px solid $color-text-main;
-		border-radius: 3px;
-		&:focus{
-			border-bottom: 2px solid #BC0D35;
-		}
-	}
-	#name, #phone {
-		width: 44%;
-	}
-	#name {
-		margin-right: 2.3%;
-	}
-	#email {
-		width: 91%;
-	}
-	#textarea {
-		width: 91%;
-		margin-bottom: 30px;
-	}
-	.btn-form {
-		float:none;
-		text-align: left;
-		background: #fff;
-		color: $color-text-main;
-		cursor: pointer;
-		padding: 15px 25px 15px 20px;
-		border-radius: 5px;
-
-
-
-	}
+  margin-top: 50px;
+  float: right;
+  width: 70%;
+  margin-bottom: 50px;
+  input,
+  textarea {
+    line-height: 40px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    text-indent: 10px;
+    border: none;
+    border: 1px solid $color-text-main;
+    border-radius: 3px;
+    &:focus {
+      border-bottom: 2px solid #bc0d35;
+    }
+  }
+  #name,
+  #phone {
+    width: 44%;
+  }
+  #name {
+    margin-right: 2.3%;
+  }
+  #email {
+    width: 91%;
+  }
+  #textarea {
+    width: 91%;
+    margin-bottom: 30px;
+  }
+  .btn-form {
+    float: none;
+    text-align: left;
+    background: #fff;
+    color: $color-text-main;
+    cursor: pointer;
+    padding: 15px 25px 15px 20px;
+    border-radius: 5px;
+  }
 }
-
-
 
 .ktn-list {
-	list-style-type: none;
-	li {
-		padding-bottom: 5px;
-		font-size: 22px;
-	}
-	li:last-child {
-		font-size: 18px;
-	}
-	i {
-		font-size: 30px;
-		padding-right: 20px;
-	}
-}
+  list-style-type: none;
+  text-align: left;
+  margin: 0 auto;
+  li {
+    padding-bottom: 5px;
+    font-size: 22px;
+    margin-bottom: 10px;
 
+    a {
+      text-decoration: none;
+      color: $color-text-main;
+      font-size: 18px;
+    }
+  }
+  li:last-child {
+    font-size: 18px;
+  }
+  i {
+    font-size: 20px;
+    padding-right: 20px;
+  }
+}

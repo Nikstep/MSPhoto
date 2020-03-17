@@ -11,11 +11,13 @@
   transition: 0.3s all ease-in-out;
 }
 .btn:hover, .btn:focus {
+  box-shadow: 5px 5px 2px #000;
+  text-shadow: 1px 1px 1px #000;
   transition: 0.3s all ease-in-out;
 }
 
 .btn-about {
-  background: #fff;
+  background: #FFF;
   transition: 0.3s all ease-in-out;
 }
 .btn-about:hover, .btn-about:focus {
@@ -26,7 +28,7 @@
 }
 
 .btn-footer:hover, .btn-footer:focus {
-  background: #e5b0cd;
+  text-shadow: 1px 1px 1px lightgrey;
 }
 
 html {
@@ -35,9 +37,7 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 
@@ -59,13 +59,9 @@ html {
 body {
   font-family: "Bohemian typewriter", sans-serif;
   color: #323232;
-  background: #fff;
+  background: #FFF;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
 }
 
 img {
@@ -256,8 +252,8 @@ a {
 }
 
 .sticky {
-  margin-top: auto;
-  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 .gallery {
@@ -343,9 +339,9 @@ a {
 .main {
   background: #e6e6e6;
 }
-.main h3,
 .main h2 {
   text-align: center;
+  margin-top: 80px;
 }
 .main li {
   border: 1px solid #333;
@@ -380,10 +376,9 @@ a {
 
 .abt-img {
   max-width: 300px;
-  max-height: 300px;
   height: auto;
   display: block;
-  margin: 90px auto;
+  margin: 50px auto;
   border-radius: 50%;
 }
 
@@ -391,38 +386,8 @@ a {
   max-width: 760px;
   display: block;
   margin: 0 auto;
-  text-align: justify !important;
+  text-align: center;
   line-height: 26px;
-  margin: 0 40px;
-}
-
-.content-container {
-  display: flex;
-  margin: auto;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-  margin-bottom: 0;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.call {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.call a {
-  margin: 10px 0;
 }
 
 .ktn {
@@ -438,15 +403,10 @@ a {
 }
 
 .ktn-left {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin: 0 auto;
-  text-align: center;
+  float: left;
+  width: 30%;
 }
-.ktn-left h2,
-.ktn-left p,
-.ktn-left ul {
+.ktn-left h2, .ktn-left p, .ktn-left ul {
   padding: 10px 40px;
 }
 .ktn-left h2 {
@@ -454,12 +414,12 @@ a {
   padding-bottom: 0;
 }
 .ktn-left .hrs {
-  width: 30%;
-  margin: 50px auto;
+  width: 50%;
+  margin: 0 15%;
   transition: 0.3s all ease-in-out;
 }
 .ktn-left .hrs:hover {
-  filter: drop-shadow(3px 3px 2px #e5b0cd) drop-shadow(-3px -3px 2px #e5b0cd);
+  filter: drop-shadow(3px 3px 2px #FF6E25) drop-shadow(-3px -3px 2px #FF6E25);
   transition: 0.3s all ease-in-out;
 }
 
@@ -469,8 +429,7 @@ a {
   width: 70%;
   margin-bottom: 50px;
 }
-.ktn-right input,
-.ktn-right textarea {
+.ktn-right input, .ktn-right textarea {
   line-height: 40px;
   padding: 0;
   margin: 0;
@@ -480,12 +439,10 @@ a {
   border: 1px solid #333;
   border-radius: 3px;
 }
-.ktn-right input:focus,
-.ktn-right textarea:focus {
-  border-bottom: 2px solid #bc0d35;
+.ktn-right input:focus, .ktn-right textarea:focus {
+  border-bottom: 2px solid #BC0D35;
 }
-.ktn-right #name,
-.ktn-right #phone {
+.ktn-right #name, .ktn-right #phone {
   width: 44%;
 }
 .ktn-right #name {
@@ -510,43 +467,33 @@ a {
 
 .ktn-list {
   list-style-type: none;
-  text-align: left;
-  margin: 0 auto;
 }
 .ktn-list li {
   padding-bottom: 5px;
   font-size: 22px;
-  margin-bottom: 10px;
-}
-.ktn-list li a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
 }
 .ktn-list li:last-child {
   font-size: 18px;
 }
 .ktn-list i {
-  font-size: 20px;
+  font-size: 30px;
   padding-right: 20px;
 }
 
 h2.claim {
-  font-size: 26px;
+  font-size: 34px;
   text-align: center;
+  font-family: bohemian;
   margin: 50px 0;
-  font-weight: 400;
+  text-shadow: 1px 1px 0px #fff, 3px 3px 1px rgba(0, 0, 0, 0.3);
 }
 
 .claim-wrapper {
-  margin: auto 0;
+  flex-grow: 1;
 }
 
-main {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  flex-grow: 1;
+.main {
+  display: flex;
 }
 
 .about {
@@ -823,4 +770,4 @@ main {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=base.css.map */

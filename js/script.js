@@ -6,7 +6,7 @@ $(document).ready(function() {
     centerMode: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    centerPadding: "25%",
+    centerPadding: "22%",
     slidesToShow: 1,
     speed: 800,
     responsive: [
@@ -14,7 +14,7 @@ $(document).ready(function() {
         breakpoint: 1500,
         settings: {
           centerMode: true,
-          centerPadding: "20%",
+          centerPadding: "14%",
           slidesToShow: 1,
           speed: 800
         }

@@ -1,16 +1,19 @@
-
 //Background color
 $color-bg-header: #fffafa;
 $color-bg-main: #333;
 $color-bg-alt: #fffafa;
 //Text color
 $color-text-main: #333;
-$color-text-alt:#fffafa;
+$color-text-alt: #fffafa;
 //Selection color
 $color-sel: $color-bg-main;
+$color-pink: #e5b0cd;
 //Fonts
-@font-face { font-family: Bohemian typewriter; src: url(../fonts/Bohemiantypewriter.ttf); }
-$font-main: 'Bohemian typewriter', sans-serif;
+@font-face {
+  font-family: Bohemian typewriter;
+  src: url(../fonts/Bohemiantypewriter.ttf);
+}
+$font-main: "Bohemian typewriter", sans-serif;
 $font-alt: Montserrat, sans-serif;
 //Responsivity
 $break-mobile: 480px;
